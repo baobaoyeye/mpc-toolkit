@@ -1,4 +1,3 @@
-
 load("//bazel:mpct.bzl", "mpct_cc_binary")
 load("@rules_proto//proto:defs.bzl", "proto_library")
 load("@rules_cc//cc:defs.bzl", "cc_proto_library")
@@ -6,36 +5,36 @@ load("@rules_cc//cc:defs.bzl", "cc_proto_library")
 package(default_visibility = ["//visibility:public"])
 
 mpct_cc_binary(
-    name= "mpc-toolkit",
-    srcs= ["main.cc"],
+    name = "mpc-toolkit",
+    srcs = ["main.cc"],
 )
 
 mpct_cc_binary(
-    name= "server",
-    srcs= ["server.cpp"],
-    deps=[
+    name = "server",
+    srcs = ["server.cpp"],
+    deps = [
         ":echo_cc_proto",
         "@com_github_brpc_brpc//:brpc",
         "@com_github_gflags_gflags//:gflags",
-    ]
+    ],
 )
 
 mpct_cc_binary(
-    name= "client",   
-    srcs= ["client.cpp"],
-    deps=[
+    name = "client",
+    srcs = ["client.cpp"],
+    deps = [
         ":echo_cc_proto",
         "@com_github_brpc_brpc//:brpc",
         "@com_github_gflags_gflags//:gflags",
-    ]
+    ],
 )
 
 proto_library(
-    name= "echo_proto",
-    srcs=["echo.proto"],
+    name = "echo_proto",
+    srcs = ["echo.proto"],
 )
 
 cc_proto_library(
-    name="echo_cc_proto",
-    deps=[":echo_proto"],
+    name = "echo_cc_proto",
+    deps = [":echo_proto"],
 )

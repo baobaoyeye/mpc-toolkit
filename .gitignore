@@ -1,5 +1,5 @@
-/bazel-bin/
-/bazel-mpc-toolkit/
-/bazel-out/
-/bazel-testlogs/
-/.vscode/
+bazel-bin/
+bazel-mpc-toolkit/
+bazel-out/
+bazel-testlogs/
+.vscode/

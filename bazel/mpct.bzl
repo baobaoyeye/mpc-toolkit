@@ -56,7 +56,6 @@ def mpct_cmake_external(**attrs):
         attrs["generate_args"] = ["-GNinja"]
     return cmake(**attrs)
 
-
 def mpct_configure_make(**attrs):
     if "args" not in attrs:
         attrs["args"] = ["-j 8"]

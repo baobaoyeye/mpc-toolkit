@@ -1,4 +1,3 @@
-
 workspace(name = "mpc-toolkit")
 
 load("//bazel:repositories.bzl", "mpct_deps")
