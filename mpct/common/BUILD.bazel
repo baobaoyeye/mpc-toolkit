@@ -1,0 +1,14 @@
+load("//bazel:mpct.bzl", "mpct_cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+mpct_cc_library(
+    name = "task",
+    hdrs = ["task.hpp"],
+)
+
+mpct_cc_library(
+    name = "executor",
+    hdrs = ["executor.hpp"],
+    deps = [":task"],
+)

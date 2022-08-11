@@ -151,7 +151,7 @@ def _com_github_gabime_spdlog():
         strip_prefix = "spdlog-1.9.2",
         type = "tar.gz",
         sha256 = "6fff9215f5cb81760be4cc16d033526d1080427d236e86d70bb02994f85e3d38",
-        build_file = "@mpct-toolkit//bazel:spdlog.BUILD",
+        build_file = "@mpc-toolkit//bazel:spdlog.BUILD",
         urls = [
             "https://github.com/gabime/spdlog/archive/refs/tags/v1.9.2.tar.gz",
         ],

@@ -1,0 +1,10 @@
+load("//bazel:mpct.bzl", "mpct_cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+mpct_cc_library(
+    name = "party",
+    srcs = ["party.cpp"],
+    hdrs = ["party.hpp"],
+    deps = ["//mpct/common:executor"],
+)
